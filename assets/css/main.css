@@ -782,7 +782,7 @@ h6 {
 }
 
 .page-title nav {
-  background-color: color-mix(in srgb, var(--accent-color) 90%, black 5%);
+  background-color: #E67E22;
   padding: 20px 0;
 }
 
@@ -2243,4 +2243,10 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+.hero-subtitle {
+    font-size: 0.65em;
+    font-weight: 500;
+    display: block;
+    margin-top: 10px;
 }
