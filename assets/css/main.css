@@ -544,12 +544,18 @@ h6 {
   margin-right: 6px;
 }
 
-.footer .footer-about .logo span {
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-family: var(--heading-font);
-  color: var(--heading-color);
+.footer .footer-about .logo .sitename{
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.footer .footer-about .logo .tagline{
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    letter-spacing: 0;
+    margin-top: 3px;
 }
 
 .footer .footer-about p {
