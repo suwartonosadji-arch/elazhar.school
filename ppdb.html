@@ -1,251 +1,322 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Courses - Mentor Bootstrap Template</title>
-  <meta name="description" content="El-Azhar Insan Cendekia adalah sekolah Islam berbasis Tahfizh, Leadership, dan Kurikulum Nasional di Kota Tangerang.">
-  <meta name="keywords" content="Sekolah Islam, Sekolah Tahfizh, SD Islam, TK Islam, El-Azhar Insan Cendekia, Tangerang">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <title>PPDB 2027/2028 SD EL-AZHAR INSAN CENDEKIA | Sekolah Islam Tangerang</title>
+  <meta name="description" content="Penerimaan Peserta Didik Baru Tahun Ajaran 2027/2028 SD EL-AZHAR INSAN CENDEKIA. Kenali program tahfiz, STEM, leadership, dan informasi pendaftaran.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://elazhar.sch.id/ppdb.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PPDB 2027/2028 - SD EL-AZHAR INSAN CENDEKIA">
+  <meta property="og:description" content="Mari bergabung bersama EL-AZHAR INSAN CENDEKIA. Pendaftaran siswa baru jenjang SD tahun ajaran 2027/2028.">
+  <meta property="og:url" content="https://elazhar.sch.id/ppdb.html">
+  <meta name="theme-color" content="#102d50">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #263E96;          /* biru utama logo */
+      --navy-2: #1D3278;       /* biru tua pendamping */
+      --teal: #405BB0;           /* biru aksen */
+      --gold: #E7B542;           /* kuning emas logo */
+      --cream: #F3F5FC;          /* biru sangat muda */
+      --ink: #202B50;
+      --muted: #68738F;
+      --white: #fff;
+      --shadow: 0 14px 40px rgba(38,62,150,.10);
+      --radius: 20px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      line-height: 1.65;
+      background: #fff;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: auto; }
+    .topbar { background: var(--navy); color: #fff; font-size: 13px; padding: 9px 0; }
+    .topbar .container { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+    header { background: rgba(255,255,255,.97); position: sticky; top:0; z-index:10; box-shadow:0 3px 18px rgba(0,0,0,.06); }
+    .nav { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { display:flex; align-items:center; gap:12px; color:var(--navy); font-weight:800; line-height:1.25; }
+    .brand-mark { width:44px; height:44px; border-radius:14px; display:grid; place-items:center; background:var(--navy); color:var(--gold); font-size:21px; }
+    .brand small { display:block; font-size:10px; letter-spacing:1.3px; color:var(--muted); margin-top:4px; }
+    .nav-links { display:flex; align-items:center; gap:22px; font-size:14px; font-weight:700; }
+    .nav-links a:hover { color:var(--teal); }
+    .btn { display:inline-flex; justify-content:center; align-items:center; gap:8px; border:0; border-radius:999px; padding:13px 21px; font-weight:800; font-size:14px; cursor:pointer; transition:.2s; }
+    .btn-primary { background:var(--gold); color:#202B50; box-shadow:0 7px 18px rgba(213,169,79,.24); }
+    .btn-primary:hover { transform:translateY(-2px); filter:brightness(1.04); }
+    .btn-outline { border:1px solid rgba(255,255,255,.55); color:#fff; }
+    .hero { position:relative; overflow:hidden; color:#fff; background:linear-gradient(115deg,rgba(25,48,125,.97),rgba(38,62,150,.88)), url('assets/images/ppdb-hero.jpg') center/cover; }
+    .hero:after { content:""; position:absolute; width:430px; height:430px; border:1px solid rgba(255,255,255,.12); border-radius:50%; right:-120px; top:-170px; box-shadow:0 0 0 45px rgba(255,255,255,.035),0 0 0 90px rgba(255,255,255,.025); }
+    .hero-inner { position:relative; z-index:1; padding:88px 0 92px; max-width:760px; }
+    .eyebrow { display:inline-block; color:#F6D77F; font-size:12px; font-weight:800; letter-spacing:2px; text-transform:uppercase; border:1px solid rgba(255,226,160,.45); padding:7px 13px; border-radius:30px; }
+    h1 { font-size:clamp(36px,6vw,62px); line-height:1.08; margin:22px 0 14px; letter-spacing:-1.5px; }
+    .hero h1 span { color:#F2C75E; }
+    .hero p { font-size:18px; max-width:620px; color:rgba(255,255,255,.86); margin:0 0 28px; }
+    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; }
+    .hero-note { margin-top:26px; color:rgba(255,255,255,.72); font-size:13px; }
+    section { padding:76px 0; }
+    .section-soft { background:var(--cream); }
+    .section-head { text-align:center; max-width:720px; margin:0 auto 38px; }
+    .kicker { color:var(--teal); text-transform:uppercase; letter-spacing:1.8px; font-size:12px; font-weight:800; }
+    h2 { color:var(--navy); font-size:clamp(27px,4vw,39px); line-height:1.2; margin:9px 0 12px; }
+    .section-head p { color:var(--muted); margin:0; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .card { background:#fff; padding:25px; border:1px solid #edf0f3; border-radius:var(--radius); box-shadow:var(--shadow); }
+    .icon { width:48px; height:48px; display:grid; place-items:center; border-radius:15px; background:#EEF1FC; color:var(--navy); font-size:23px; margin-bottom:16px; }
+    .card h3 { color:var(--navy); margin:0 0 8px; font-size:18px; }
+    .card p { color:var(--muted); margin:0; font-size:14px; }
+    .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; counter-reset:step; }
+    .step { background:#fff; border:1px solid #edf0f3; padding:22px; border-radius:17px; }
+    .step:before { counter-increment:step; content:"0" counter(step); display:block; color:var(--gold); font-weight:900; font-size:25px; margin-bottom:10px; }
+    .step h3 { color:var(--navy); margin:0 0 6px; font-size:16px; }
+    .step p { color:var(--muted); margin:0; font-size:13px; }
+    .requirements { display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:start; }
+    .checklist { list-style:none; padding:0; margin:18px 0 0; }
+    .checklist li { padding:10px 0 10px 30px; position:relative; border-bottom:1px solid #edf0f3; }
+    .checklist li:before { content:"✓"; position:absolute; left:0; top:10px; color:var(--teal); font-weight:900; }
+    .info-box { background:var(--navy); color:#fff; padding:30px; border-radius:var(--radius); }
+    .info-box h3 { color:#F2C75E; margin-top:0; }
+    .info-box p { color:rgba(255,255,255,.82); }
+    .cta { background:linear-gradient(115deg,var(--navy),#344FA5); color:#fff; border-radius:26px; padding:42px; display:flex; justify-content:space-between; align-items:center; gap:25px; }
+    .cta h2 { color:#fff; margin-top:0; }
+    .cta p { color:rgba(255,255,255,.8); margin-bottom:0; }
+    .faq { max-width:820px; margin:auto; }
+    details { background:#fff; border:1px solid #e9edf1; border-radius:13px; padding:17px 20px; margin:10px 0; }
+    summary { cursor:pointer; color:var(--navy); font-weight:800; }
+    details p { color:var(--muted); margin-bottom:0; }
+    footer { background:#192B70; color:#fff; padding:38px 0; }
+    footer p { color:rgba(255,255,255,.7); margin:7px 0; font-size:14px; }
+    .footer-row { display:flex; justify-content:space-between; gap:25px; flex-wrap:wrap; }
+    .copyright { border-top:1px solid rgba(255,255,255,.13); margin-top:25px; padding-top:18px; font-size:12px; color:rgba(255,255,255,.55); }
+    .wa-float { position:fixed; right:20px; bottom:20px; z-index:20; background:#168b59; color:white; border-radius:999px; padding:13px 18px; font-weight:800; box-shadow:0 8px 25px rgba(0,0,0,.2); }
+    @media(max-width:800px) {
+      .nav-links { display:none; }
+      .hero-inner { padding:65px 0 72px; }
+      .cards { grid-template-columns:1fr 1fr; }
+      .steps { grid-template-columns:1fr 1fr; }
+      .requirements { grid-template-columns:1fr; }
+      .cta { display:block; padding:30px; }
+      .cta .btn { margin-top:20px; }
+    }
+    @media(max-width:520px) {
+      .container { width:min(100% - 30px,1120px); }
+      .topbar .container { justify-content:center; text-align:center; }
+      .nav { min-height:66px; }
+      .brand-mark { width:39px; height:39px; }
+      .brand { font-size:13px; }
+      .nav > .btn { padding:10px 14px; font-size:12px; }
+      .hero-inner { padding:55px 0 62px; }
+      .hero p { font-size:16px; }
+      section { padding:58px 0; }
+      .cards,.steps { grid-template-columns:1fr; }
+      .card { padding:22px; }
+      .hero-actions .btn { width:100%; }
+      .wa-float { right:12px; bottom:12px; padding:11px 15px; font-size:13px; }
+    }
+  </style>
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Mentor
-  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-  * Updated: Jul 07 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Structured data dasar. Lengkapi alamat resmi sekolah sebelum publikasi. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "School",
+    "name": "EL-AZHAR INSAN CENDEKIA",
+    "url": "https://elazhar.sch.id/",
+    "description": "Sekolah Islam dengan program tahsin dan tahfiz Al-Qur'an, STEM Learning, dan leadership di Tangerang."
+  }
+  </script>
 </head>
+<body>
+  <!-- GANTI nomor dan URL formulir pada bagian KONFIGURASI di bawah. -->
+  <div class="topbar">
+    <div class="container">
+      <span>PPDB SD Tahun Ajaran 2027/2028</span>
+      <span>EL-AZHAR INSAN CENDEKIA</span>
+    </div>
+  </div>
 
-<body class="courses-page">
-
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/logo.png"
-     alt="Elazhar Insan Cendekia"
-     style="height:90px;">
+  <header>
+    <div class="container nav">
+      <a class="brand" href="https://elazhar.sch.id/" aria-label="Beranda EL-AZHAR">
+        <span class="brand-mark">E</span>
+        <span>EL-AZHAR INSAN CENDEKIA<small>QUR'ANI • CENDEKIA • PEMIMPIN</small></span>
       </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home<br></a></li>
-<li class="dropdown">
-  <a href="#">
-    <span>Tentang Kami</span>
-    <i class="bi bi-chevron-down toggle-dropdown"></i>
-  </a>
-
-  <ul>
-    <li><a href="tentang-kami.html">Profil Sekolah</a></li>
-    <li><a href="visi-misi.html">Visi dan Misi</a></li>
-    <li><a href="guru.html">Guru dan Tenaga Kependidikan</a></li>
-  </ul>
-</li>
-          <li><a href="ppdb2.html">PPDB</a></li>
-          <li><a href="kurikulum.html">Kurikulum</a></li>
-          <li><a href="kontak.html">Kontak</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#program">Program</a>
+        <a href="#alur">Alur</a>
+        <a href="#persyaratan">Persyaratan</a>
+        <a href="#faq">FAQ</a>
       </nav>
-
+      <a class="btn btn-primary" data-form-link href="#daftar">Daftar Sekarang</a>
     </div>
   </header>
 
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Courses</h1>
-              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Courses</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
-
-    <!-- Courses Section -->
-    <section id="courses" class="courses section">
-
+  <main>
+    <section class="hero">
       <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="course-item">
-              <img src="assets/img/course/course-1.webp" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <p class="category">Web Development</p>
-                  <p class="price">$169</p>
-                </div>
-
-                <h3><a href="course-details.html">Website Design</a></h3>
-                <p class="description">Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="assets/img/person/person-m-7.webp" class="img-fluid" alt="">
-                    <a href="" class="trainer-link">Antonio</a>
-                  </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bi bi-person user-icon"></i>&nbsp;50
-                    &nbsp;&nbsp;
-                    <i class="bi bi-heart heart-icon"></i>&nbsp;65
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="course-item">
-              <img src="assets/img/course/course-2.webp" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <p class="category">Marketing</p>
-                  <p class="price">$250</p>
-                </div>
-
-                <h3><a href="course-details.html">Search Engine Optimization</a></h3>
-                <p class="description">Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="assets/img/person/person-f-14.webp" class="img-fluid" alt="">
-                    <a href="" class="trainer-link">Lana</a>
-                  </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bi bi-person user-icon"></i>&nbsp;35
-                    &nbsp;&nbsp;
-                    <i class="bi bi-heart heart-icon"></i>&nbsp;42
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="course-item">
-              <img src="assets/img/course/course-3.webp" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <p class="category">Content</p>
-                  <p class="price">$180</p>
-                </div>
-
-                <h3><a href="course-details.html">Copywriting</a></h3>
-                <p class="description">Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="assets/img/person/person-m-12.webp" class="img-fluid" alt="">
-                    <a href="" class="trainer-link">Brandon</a>
-                  </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bi bi-person user-icon"></i>&nbsp;20
-                    &nbsp;&nbsp;
-                    <i class="bi bi-heart heart-icon"></i>&nbsp;85
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-
+        <div class="hero-inner">
+          <span class="eyebrow">Penerimaan Peserta Didik Baru</span>
+          <h1>Masa Depan Gemilang Dimulai <span>di Sini.</span></h1>
+          <p>Wujudkan generasi yang mencintai Al-Qur'an, berwawasan luas, berakhlak mulia, dan memiliki jiwa kepemimpinan bersama EL-AZHAR INSAN CENDEKIA.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" data-form-link href="#daftar">✦ Daftar Sekarang</a>
+            <a class="btn btn-outline" data-wa-link href="#kontak">Konsultasi WhatsApp</a>
+          </div>
+          <div class="hero-note">Pendaftaran jenjang Sekolah Dasar • Tahun Ajaran 2027/2028</div>
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Courses Section -->
+    <section id="program">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Pendidikan Terpadu</span>
+          <h2>Belajar, Bertumbuh, dan Menginspirasi</h2>
+          <p>Mengembangkan potensi anak melalui pendidikan Al-Qur'an, akademik, karakter, dan keterampilan masa depan.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon">۞</div><h3>Tahsin & Tahfiz</h3><p>Membangun kedekatan dengan Al-Qur'an melalui pembelajaran membaca dan menghafal yang terarah.</p></article>
+          <article class="card"><div class="icon">✧</div><h3>Kurikulum Terpadu</h3><p>Mengembangkan pengetahuan dan kemampuan akademik dengan nilai-nilai Islami.</p></article>
+          <article class="card"><div class="icon">⚙</div><h3>STEM Learning</h3><p>Mendorong rasa ingin tahu, kreativitas, dan kemampuan memecahkan masalah.</p></article>
+          <article class="card"><div class="icon">★</div><h3>Leadership</h3><p>Menumbuhkan tanggung jawab, kemandirian, dan jiwa kepemimpinan.</p></article>
+          <article class="card"><div class="icon">文</div><h3>Bahasa Arab & Inggris</h3><p>Mengenalkan keterampilan berbahasa untuk memperluas wawasan dan komunikasi.</p></article>
+          <article class="card"><div class="icon">◎</div><h3>Public Speaking & Life Skill</h3><p>Melatih keberanian berkomunikasi dan keterampilan kehidupan sehari-hari.</p></article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section-soft" id="alur">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Mudah dan Praktis</span>
+          <h2>Alur Pendaftaran</h2>
+          <p>Ikuti tahapan pendaftaran calon peserta didik baru berikut ini.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><h3>Isi Formulir</h3><p>Lengkapi data calon siswa dan orang tua melalui formulir online.</p></article>
+          <article class="step"><h3>Konfirmasi Admin</h3><p>Admin PPDB akan menghubungi orang tua melalui WhatsApp.</p></article>
+          <article class="step"><h3>Verifikasi</h3><p>Ikuti proses verifikasi data dan informasi tahapan berikutnya.</p></article>
+          <article class="step"><h3>Daftar Ulang</h3><p>Calon siswa yang dinyatakan diterima mengikuti proses daftar ulang.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="persyaratan">
+      <div class="container requirements">
+        <div>
+          <span class="kicker">Persiapkan dari Sekarang</span>
+          <h2>Persyaratan Pendaftaran</h2>
+          <p>Persyaratan final mengikuti ketentuan resmi panitia PPDB Tahun Ajaran 2027/2028.</p>
+          <ul class="checklist">
+            <li>Data identitas calon siswa.</li>
+            <li>Data orang tua atau wali.</li>
+            <li>Informasi asal TK/PAUD (jika ada).</li>
+            <li>Dokumen pendukung sesuai arahan panitia.</li>
+          </ul>
+          <p style="font-size:13px;color:#657287">Persyaratan usia, dokumen, jadwal, dan ketentuan seleksi akan dikonfirmasi oleh admin sekolah.</p>
+        </div>
+        <aside class="info-box">
+          <h3>Informasi Biaya Pendidikan</h3>
+          <p>Untuk mendapatkan informasi biaya pendaftaran dan pendidikan, silakan menghubungi admin PPDB EL-AZHAR INSAN CENDEKIA.</p>
+          <a class="btn btn-primary" data-wa-link href="#kontak">Tanyakan Biaya via WhatsApp</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-soft" id="daftar">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <span class="kicker" style="color:#F2C75E">Tahun Ajaran 2027/2028</span>
+            <h2>Siap Bergabung Bersama Kami?</h2>
+            <p>Mulai proses pendaftaran calon siswa SD EL-AZHAR INSAN CENDEKIA.</p>
+          </div>
+          <a class="btn btn-primary" data-form-link href="#daftar">Isi Formulir Pendaftaran →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Informasi PPDB</span>
+          <h2>Pertanyaan yang Sering Diajukan</h2>
+        </div>
+        <div class="faq">
+          <details><summary>Bagaimana cara mendaftar?</summary><p>Klik tombol Daftar Sekarang pada halaman ini, kemudian isi formulir pendaftaran online. Admin sekolah akan menghubungi orang tua untuk proses selanjutnya.</p></details>
+          <details><summary>Jenjang apa yang dibuka?</summary><p>Halaman ini khusus untuk penerimaan peserta didik baru jenjang Sekolah Dasar (SD) Tahun Ajaran 2027/2028.</p></details>
+          <details><summary>Bagaimana mengetahui biaya pendidikan?</summary><p>Silakan menghubungi admin PPDB melalui WhatsApp untuk memperoleh informasi biaya pendidikan yang resmi dan terbaru.</p></details>
+          <details><summary>Bagaimana jika membutuhkan bantuan pengisian formulir?</summary><p>Orang tua dapat menghubungi admin PPDB melalui tombol WhatsApp pada halaman ini.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-soft" id="kontak">
+      <div class="container section-head">
+        <span class="kicker">Hubungi Kami</span>
+        <h2>Butuh Informasi Lebih Lanjut?</h2>
+        <p>Tim EL-AZHAR INSAN CENDEKIA siap membantu menjawab pertanyaan seputar PPDB.</p>
+        <p style="margin-top:20px"><a class="btn btn-primary" data-wa-link href="#kontak">Hubungi Admin PPDB via WhatsApp</a></p>
+      </div>
+    </section>
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <a href="index.html" class="logo d-flex flex-column align-items-start">
-            <span class="sitename">El-Azhar Insan Cendekia</span>
-            <span class="tagline">Sekolah Tahfiz</span>
-            </a>
-          <div class="footer-contact pt-3">
-            <p>KAMPUS PINANG</p>
-            <p>Jl. Nuri No.152 D Blok B, RT.04 RW.05</p>
-            <p>Pinang, Kec. Pinang, Kota Tangerang</p>
-            <p>Banten 15145</p>
-            <p class="mt-3"><strong>Telp:</strong><span><a href="tel:+6285111448181">+62 851-1144-8181</a></span></p>
-            <p><strong>Email:</strong> <span>elazharinsancendekia@gmail.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href="https://www.youtube.com/@elazharinsancendekia"><i class="bi bi-youtube"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61591539947105&locale=id_ID"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/elazharinsancendekia"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.tiktok.com/@elazharinsancendekia"><i class="bi bi-tiktok"></i></a>
-            <a href="https://wa.me/6285111448181?text=Assalamu'alaikum,%20saya%20ingin%20bertanya%20tentang%20PPDB%20El-Azhar%20Insan%20Cendekia."><i class="bi bi-whatsapp"></i></a>
-          </div>
-        </div>
-
-        
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <div><strong>EL-AZHAR INSAN CENDEKIA</strong><p>Qur'ani • Cendekia • Berjiwa Pemimpin</p></div>
+        <div><strong>PPDB SD 2027/2028</strong><p><a href="https://elazhar.sch.id/">elazhar.sch.id</a></p></div>
       </div>
+      <div class="copyright">© 2026 EL-AZHAR INSAN CENDEKIA. Informasi PPDB mengikuti ketentuan resmi sekolah.</div>
     </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">El-Azhar Insan Cendekia</strong> <span>2026 All Rights Reserved</span></p>
-      <div class="credits">
-        
-      </div>
-    </div>
-
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a class="wa-float" data-wa-link href="#kontak" aria-label="Chat WhatsApp admin">☏ WhatsApp</a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+  <script>
+    /* =========================
+       KONFIGURASI PPDB
+       Ganti dua nilai di bawah ini sebelum website dipublikasikan.
+       ========================= */
+    const PPDB_CONFIG = {
+      // Masukkan link Google Forms, contoh: https://forms.gle/xxxxxxxx
+      googleFormUrl: "",
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      // Gunakan kode negara 62 tanpa tanda + atau angka 0 di depan.
+      // Contoh: 6285111448181
+      whatsappNumber: "6285111448181",
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+      // Pesan otomatis saat orang tua menghubungi admin.
+      whatsappMessage: "Assalamu'alaikum, saya ingin bertanya tentang PPDB SD EL-AZHAR INSAN CENDEKIA Tahun Ajaran 2027/2028."
+    };
 
+    document.querySelectorAll("[data-form-link]").forEach((link) => {
+      if (PPDB_CONFIG.googleFormUrl) {
+        link.href = PPDB_CONFIG.googleFormUrl;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      } else {
+        link.href = "#kontak";
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          alert("Link Google Forms belum dipasang. Silakan hubungi admin PPDB melalui WhatsApp.");
+          document.querySelector("#kontak").scrollIntoView({ behavior: "smooth" });
+        });
+      }
+    });
+
+    document.querySelectorAll("[data-wa-link]").forEach((link) => {
+      const number = PPDB_CONFIG.whatsappNumber.replace(/\D/g, "");
+      link.href = "https://wa.me/" + number + "?text=" + encodeURIComponent(PPDB_CONFIG.whatsappMessage);
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    });
+  </script>
 </body>
-
 </html>
